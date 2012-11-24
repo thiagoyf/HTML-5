@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Página teste 2</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script type="text/javascript" src="script.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <div id="presentation">
+                <h1>Vídeo Tag</h1>
+                <video width="420" controls="controls">
+                    <source src="http://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                    Seu navegador não suporta a tag video
+                </video>
+                <br>
+
+                <h1>Canvas Tag</h1>
+                <canvas id="canvas" width="300" height="50">
+
+                </canvas>
+		<br>
+		
+                <label for="text">Digite um texto:</label>
+                <input id="text" type="text" onkeyup="manipulandoCanvas()" onkeypress="clearCanvas()">
+
+                <label for="color">Selecione uma cor do texto:</label>
+                <input id="color" type="color" onchange="manipulandoCanvas()">
+                
+                <label for="clear">Limpa canvas</label>
+                <input id="clear" type="button" value="Limpar" onclick="clearCanvas()">
+                                
+                <h1>Geolocalização</h1>
+                <p id="local">Clique abaixo para saber a geolocalização</p>
+                <button onclick="getLocation()">Clique aqui</button><br>
+                
+                <h1>Form Email</h1>
+                <form action="home.html">
+                    <label for="email">Email:</label>
+                    <input id="email" type="email">
+                    <input type="submit" value="Envia" onclick="popUpEmail()">
+                    <input type="submit" formnovalidate="formnovalidate" value="Envia sem validar" onclick="popUpEmail()">
+                </form>
+                
+                <h1>Form Data</h1>
+                <form action="home.html">
+                    <input id="date" type="date" onchange="popUpDate()">
+                </form>
+            </div>
+        </div>
+    </body>
+</html>
